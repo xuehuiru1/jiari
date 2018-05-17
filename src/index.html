@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="fonts1/iconfont.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <span>北京</span> 假日旅游
+        </header>
+        <section class="cont">
+            <div>
+                <div class="box swiper-container">
+                    <ul class="swiper-wrapper banner"></ul>
+                    <script type="text/x-handlebars-template" id="swiper-tpl">
+                        {{#each this}}
+                        <li class="swiper-slide">
+                            <img src="{{url}}" alt="">
+                        </li>
+                        {{/each}}
+                    </script>
+                    <div class="swiper-pagination page"></div>
+                </div>
+                <div class="list">
+
+                </div>
+                <script type="text/x-handlebars-template" id="list-tpl">
+                    {{#each this}}
+                    <a href="detail.html?id={{id}}">
+                        <dl>
+                            <dt><img src="{{url}}"></dt>
+                            <dd>
+                                <h4>{{title}}</h4>
+                                <div class="yuan">
+                                    <b>{{xs}}</b>
+                                    <h5>{{price}}</h5>
+                                    <span>{{span}}</span>
+                                </div>
+                                <span>{{discribe}}</span>
+                                <p>{{address}}<u>{{p}}公里</u></p>
+                            </dd>
+                        </dl>
+                    </a>
+                    {{/each}}
+
+                </script>
+                <div class="login">
+                    <span>上拉加载更多...</span>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="js/libs/require.js"></script>
+<script>
+    require(['./js/main.js'], function() {
+        require(['index'])
+    })
+</script>
+
+</html>

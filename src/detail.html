@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="fonts1/iconfont.css">
+</head>
+
+<body>
+    <div class="wrap"></div>
+    <script type="text/x-handlebars-template" id="detail-tpl">
+        <i class="icon iconfont icon-angle-left" id="one"></i>
+        <img src="{{url}}">
+        <i class="icon iconfont icon-shoucang1" id="two"></i>
+        <div class="cont">
+            <h3>{{title}}</h3>
+            <span>{{pl}}</span>
+            <i class="icon iconfont icon-angle-right"></i>
+        </div>
+        <div class="img">
+            <p>{{address}}</p>
+            <img src="imgs/8.png">
+        </div>
+        <span>{{p}}</span>
+    </script>
+</body>
+<script src="js/libs/require.js"></script>
+<script>
+    require(['./js/main.js'], function() {
+        require(['detail'])
+    })
+</script>
+
+</html>
